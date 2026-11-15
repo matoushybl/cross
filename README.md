@@ -244,6 +244,7 @@ versions may change when the Ubuntu repositories are updated.
 | `powerpc-unknown-linux-gnu`                      | 2.39       | 13.3.0    | 13.3.0   | ✓   | 10.1.0 |   ✓    |
 | `powerpc64-unknown-linux-gnu`                    | 2.39       | 13.3.0    | 13.3.0   | ✓   | 10.1.0 |   ✓    |
 | `powerpc64le-unknown-linux-gnu`                  | 2.39       | 13.3.0    | 13.3.0   | ✓   | 10.1.0 |   ✓    |
+| `riscv32imac-unknown-linux-musl`                  | 1.2.5      | 14.4.0    | 14.4.0   | ✓   | 10.1.0 |   ✓    |
 | `riscv64gc-unknown-linux-gnu`                    | 2.39       | 13.3.0    | 13.3.0   | ✓   | 10.1.0 |   ✓    |
 | `riscv64gc-unknown-linux-musl`                   | 1.2.5      | 14.2.0    | 14.2.0   | ✓   | 10.1.0 |   ✓    |
 | `s390x-unknown-linux-gnu`                        | 2.39       | 13.3.0    | 13.3.0   | ✓   | 10.1.0 |   ✓    |
