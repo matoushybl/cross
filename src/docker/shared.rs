@@ -1024,6 +1024,14 @@ impl DockerCommandExt for Command {
             self.args(["-e", "XDG_CACHE_HOME=/target/.zig-cache"]);
         }
         self.add_configuration_envvars();
+        // custom targets need an unstable rustc flag, and the image provides the spec
+        if crate::target_specs::spec(options.target.triple()).is_some() {
+            if let Some(flags) =
+                crate::target_specs::rustflags(env::var("RUSTFLAGS").ok().as_deref())
+            {
+                self.args(["-e", &format!("RUSTFLAGS={flags}")]);
+            }
+        }
 
         if let Some(username) = id::username().wrap_err("could not get username")? {
             self.args(["-e", &format!("USER={username}")]);

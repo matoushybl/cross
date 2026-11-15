@@ -43,6 +43,7 @@ mod interpreter;
 pub mod rustc;
 pub mod rustup;
 pub mod shell;
+pub mod target_specs;
 pub mod temp;
 
 use std::env;

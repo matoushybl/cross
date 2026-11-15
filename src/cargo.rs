@@ -137,6 +137,20 @@ pub fn cargo_metadata_with_args(
         command.arg(format!("+{channel}"));
     }
     command.arg("metadata").args(["--format-version", "1"]);
+    if let Some(triple) = args
+        .and_then(|a| a.target.as_ref())
+        .map(|t| t.triple().to_owned())
+    {
+        // a non-builtin triple needs its specification and an unstable rustc flag
+        if let Some(dir) = crate::target_specs::spec_path(&triple)? {
+            command.env("RUST_TARGET_PATH", dir);
+        }
+        if let Some(flags) =
+            crate::target_specs::rustflags(std::env::var("RUSTFLAGS").ok().as_deref())
+        {
+            command.env("RUSTFLAGS", flags);
+        }
+    }
     if let Some(cd) = cd {
         command.current_dir(cd);
     }

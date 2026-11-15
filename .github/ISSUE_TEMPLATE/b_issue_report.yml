@@ -65,6 +65,7 @@ body:
         - powerpc64le-unknown-linux-gnu
         - powerpc64-unknown-linux-gnu
         - powerpc-unknown-linux-gnu
+        - riscv32imac-unknown-linux-musl
         - riscv64gc-unknown-linux-gnu
         - riscv64gc-unknown-linux-musl
         - s390x-unknown-linux-gnu

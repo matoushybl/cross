@@ -1,0 +1,5 @@
+{
+    "type": "added",
+    "description": "add riscv32imac-unknown-linux-musl (soft-float rv32imac_zba_zbb_zbs, ilp32) target, and support custom target specifications in provided images",
+    "issues": []
+}
